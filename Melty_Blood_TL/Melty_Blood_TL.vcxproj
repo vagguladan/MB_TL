@@ -134,6 +134,7 @@
     <ClInclude Include="MBAnimator.h" />
     <ClInclude Include="MBApplication.h" />
     <ClInclude Include="MBBackGround.h" />
+    <ClInclude Include="MBBaseHitbox.h" />
     <ClInclude Include="MBBattleScene.h" />
     <ClInclude Include="MBCamera.h" />
     <ClInclude Include="MBCharcterScene.h" />
@@ -169,6 +170,7 @@
     <ClCompile Include="MBAnimator.cpp" />
     <ClCompile Include="MBApplication.cpp" />
     <ClCompile Include="MBBackGround.cpp" />
+    <ClCompile Include="MBBaseHitbox.cpp" />
     <ClCompile Include="MBBattleScene.cpp" />
     <ClCompile Include="MBCamera.cpp" />
     <ClCompile Include="MBCharcterScene.cpp" />

@@ -78,6 +78,7 @@ namespace MB
 
 		eState mState;
 		bool mDoubleJumpCheck;
+		bool mSaberFrontMove;
 		bool mSaberBackMove;
 		bool mSaberDownMove;
 

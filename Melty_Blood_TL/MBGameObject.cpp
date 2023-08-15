@@ -33,6 +33,9 @@ namespace MB
 			comp->Render(hdc);
 		}
 	}
+	void GameObject::MakeAnimation()
+	{
+	}
 	void GameObject::OnCollisionEnter(Collider* other)
 	{
 	}

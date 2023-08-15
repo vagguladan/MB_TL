@@ -108,8 +108,14 @@
     <Filter Include="Engine\Contents\GameObject\Playerble\Player%28Test%29">
       <UniqueIdentifier>{962e6a93-44e6-47fc-baef-c611567f6e78}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Contents\GameObject\Playerble\Saber%28past%29">
+    <Filter Include="Engine\Contents\GameObject\Playerble\HitBox">
       <UniqueIdentifier>{8bdf60d5-3b3d-4be3-8026-95e726c84c94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Contents\GameObject\Playerble\HitBox\BaseHitbox">
+      <UniqueIdentifier>{15b8cc22-77f5-4d68-9e70-f325c0717a9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Contents\GameObject\Playerble\HitBox\SaberHitBox">
+      <UniqueIdentifier>{ebfc6538-7125-4f9f-bd1b-8545f99034f3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -197,9 +203,6 @@
     <ClInclude Include="MBRigidBody.h">
       <Filter>Engine\Component\RigidBody</Filter>
     </ClInclude>
-    <ClInclude Include="MBSaberHitBox.h">
-      <Filter>Engine\Contents\GameObject\Playerble\Saber</Filter>
-    </ClInclude>
     <ClInclude Include="MBBackGround.h">
       <Filter>Engine\Contents\GameObject\BackGround</Filter>
     </ClInclude>
@@ -217,6 +220,12 @@
     </ClInclude>
     <ClInclude Include="MBPlayer.h">
       <Filter>Engine\Contents\GameObject\Playerble\Player%28Test%29</Filter>
+    </ClInclude>
+    <ClInclude Include="MBBaseHitbox.h">
+      <Filter>Engine\Contents\GameObject\Playerble\HitBox\BaseHitbox</Filter>
+    </ClInclude>
+    <ClInclude Include="MBSaberHitBox.h">
+      <Filter>Engine\Contents\GameObject\Playerble\HitBox\SaberHitBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -300,9 +309,6 @@
     <ClCompile Include="MBRigidBody.cpp">
       <Filter>Engine\Component\RigidBody</Filter>
     </ClCompile>
-    <ClCompile Include="MBSaberHitBox.cpp">
-      <Filter>Engine\Contents\GameObject\Playerble\Saber</Filter>
-    </ClCompile>
     <ClCompile Include="MBBackGround.cpp">
       <Filter>Engine\Contents\GameObject\BackGround</Filter>
     </ClCompile>
@@ -320,6 +326,12 @@
     </ClCompile>
     <ClCompile Include="MBPlayer.cpp">
       <Filter>Engine\Contents\GameObject\Playerble\Player%28Test%29</Filter>
+    </ClCompile>
+    <ClCompile Include="MBBaseHitbox.cpp">
+      <Filter>Engine\Contents\GameObject\Playerble\HitBox\BaseHitbox</Filter>
+    </ClCompile>
+    <ClCompile Include="MBSaberHitBox.cpp">
+      <Filter>Engine\Contents\GameObject\Playerble\HitBox\SaberHitBox</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

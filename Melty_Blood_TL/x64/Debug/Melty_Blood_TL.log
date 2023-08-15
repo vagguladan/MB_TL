@@ -1,2 +1,64 @@
-﻿  MBBattleScene.cpp
+﻿  MBAnimation.cpp
+  MBApplication.cpp
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBApplication.cpp(34,23): warning C4838: 'UINT'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBApplication.cpp(34,31): warning C4838: 'UINT'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+  MBBackGround.cpp
+  MBBaseHitbox.cpp
+  MBBattleScene.cpp
+  MBCamera.cpp
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBCamera.cpp(19,39): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBCamera.cpp(20,40): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MBCharcterScene.cpp
+  MBCollider.cpp
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBCollider.cpp(60,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBCollider.cpp(60,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBCollider.cpp(59,16): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBCollider.cpp(59,9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MBCollisionManager.cpp
+  MBFloor.cpp
+  MBGameObject.cpp
+  MBLayer.cpp
+  MBPlayer.cpp
+  MBRigidBody.cpp
+  MBSaber.cpp
+  MBSaberHitBox.cpp
+  MBScene.cpp
+  MBSceneManager.cpp
+  MBSpriteRender.cpp
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(45,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(44,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(43,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(42,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(65,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(64,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(63,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBSpriteRender.cpp(62,31): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MBTexture.cpp
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(119,24): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(123,31): warning C4244: '=': 'float'에서 'BYTE'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(132,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(132,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(131,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(131,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(129,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(128,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(127,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(126,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(156,33): warning C4244: '인수': 'float'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(156,18): warning C4244: '인수': 'float'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(155,25): warning C4244: '인수': 'float'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(155,14): warning C4244: '인수': 'float'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(168,55): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(168,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(168,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(168,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(166,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(165,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(164,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\오태지\Downloads\Melty_Blood_TL\Melty_Blood_TL\MBTexture.cpp(163,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  MBTitleScene.cpp
+  Melty_Blood_TL.cpp
+  코드를 생성하고 있습니다...
   Melty_Blood_TL.vcxproj -> C:\Users\오태지\Downloads\Melty_Blood_TL\x64\Debug\Melty_Blood_TL.exe

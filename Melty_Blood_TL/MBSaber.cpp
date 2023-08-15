@@ -23,6 +23,9 @@ namespace MB
 		, mAttDelay(0.4f)
 		, mImgIdx(0)
 		, mSaber_Attack(Saber_Attack::None)
+		, mSaberFrontMove(nullptr)
+		, mSaberBackMove(nullptr)
+		, mSaberDownMove(nullptr)
 	{
 	}
 	Saber::~Saber()
@@ -233,6 +236,7 @@ namespace MB
 		Transform* tr = GetComponent<Transform>();
 		Vector2 velocity = mRigidbody->GetVelocity();
 		Vector2 pos = tr->GetPosition();
+		mSaberBackMove = true;
 
 		if (Input::GetKey(eKeyCode::A))
 		{
@@ -244,49 +248,206 @@ namespace MB
 			mCurState = eState::Attack;
 		}
 
-		if (Input::GetKeyUp(eKeyCode::A)
-		)
+		if (Input::GetKeyUp(eKeyCode::A))
 		{
-
 			mAnimator->PlayAnimation(L"Saber_Idle", true);
 			mState = eState::Idle;
 		}
 	}
 	void Saber::Attack()
 	{
-		if (mAnimator->GetActiveAnime()->GetIndex() == 4)
+		Animator* animator = GetComponent<Animator>();
+		if (mSaberDownMove == true)
 		{
-			Transform* tr = GetComponent<Transform>();
-			SaberHitBox* Saber_Hitbox = object::Instantiate<SaberHitBox>(eLayerType::HitBox, tr->GetPosition());
-			Saber_Hitbox->SetPlayer(this);
-			Saber_Hitbox->SaberHitboxCollider();
+			if (animator->IsActiveAnimationComplete())
+			{
+				animator->PlayAnimation(L"Saber_Sit", true);
+				mState = eState::Sit;
+			}
 		}
-		if (mAnimator->IsActiveAnimationComplete())
+		if (mSaberDownMove == false)
 		{
-			mCurState = eState::None;
+			if (animator->IsActiveAnimationComplete())
+			{
+				animator->PlayAnimation(L"Saber_Idle", true);
+				mState = eState::Idle;
+			}
+
 		}
 
 	}
 	void Saber::Jump_Attack()
 	{
+		Transform* tr = GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+		Animator* animator = GetComponent<Animator>();
+		if (animator->IsActiveAnimationComplete())
+		{
+			animator->PlayAnimation(L"PlayerIdle", true);
+			mState = eState::Idle;
+			mDoubleJumpCheck = false;
+		}
 	}
 	void Saber::Hit()
 	{
 	}
 	void Saber::JumpToUp()
 	{
+		Transform* tr = GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+		Animator* animator = GetComponent<Animator>();
+
+		if (Input::GetKeyDown(eKeyCode::W) && mDoubleJumpCheck == false)
+		{
+			animator->PlayAnimation(L"Saber_JumpToUp", false);
+			Rigidbody* rb = GetComponent<Rigidbody>();
+			Vector2 velocity = rb->GetVelocity();
+			velocity.y = -500.0f;
+			rb->SetVelocity(velocity);
+			rb->SetGround(false);
+
+			mDoubleJumpCheck = true;
+			mState = eState::JumpToFall;
+		}
+
+		if (Input::GetKey(eKeyCode::A))
+		{
+			pos.x -= 300.0f * Time::DeltaTime();
+		}
+		if (Input::GetKey(eKeyCode::S))
+		{
+
+			GetComponent<Rigidbody>()->AddForce(Vector2(0.0f, 200.0f));
+		}
+		if (Input::GetKey(eKeyCode::D))
+		{
+			pos.x += 300.0f * Time::DeltaTime();
+		}
+
+		if (Input::GetKey(eKeyCode::H))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+			animator->PlayAnimation(L"Saber_JumpAAttack", false);
+			mState = eState::Jump_Attack;
+		}
+
+		if (Input::GetKey(eKeyCode::J))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+			animator->PlayAnimation(L"Saber_JumpBAttack", false);
+			mState = eState::Jump_Attack;
+		}
+		if (Input::GetKey(eKeyCode::Y))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+			animator->PlayAnimation(L"Saber_JumpCAttack", false);
+			mState = eState::Jump_Attack;
+		}
 	}
 	void Saber::JumpToFall()
 	{
+		Transform* tr = GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+		Animator* animator = GetComponent<Animator>();
+
+
+		if (Input::GetKey(eKeyCode::A))
+		{
+			pos.x -= 300.0f * Time::DeltaTime();
+			//GetComponent<Rigidbody>()->AddForce(Vector2(-200.0f, 0.0f));
+		}
+		if (Input::GetKey(eKeyCode::S))
+		{
+			//if (pos.y < 480.0f)
+			//pos.y += 300.0f * Time::DeltaTime();
+
+			GetComponent<Rigidbody>()->AddForce(Vector2(0.0f, 200.0f));
+		}
+		if (Input::GetKey(eKeyCode::D))
+		{
+			pos.x += 300.0f * Time::DeltaTime();
+			//GetComponent<Rigidbody>()->AddForce(Vector2(200.0f, 0.0f));
+		}
+
+		if (Input::GetKey(eKeyCode::H))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+
+			animator->PlayAnimation(L"Saber_JumpAAttack", false);
+			mState = eState::Attack;
+		}
+
+		if (Input::GetKey(eKeyCode::J))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+			animator->PlayAnimation(L"Saber_JumpBAttack", false);
+			mState = eState::Attack;
+		}
+		if (Input::GetKey(eKeyCode::Y))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+			animator->PlayAnimation(L"Saber_JumpCAttack", false);
+			mState = eState::Attack;
+		}
 	}
 	void Saber::Double_Jump()
 	{
 	}
 	void Saber::Sit()
 	{
+		Transform* tr = GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+		Animator* animator = GetComponent<Animator>();
+		mSaberDownMove = true;
+
+
+		if (Input::GetKey(eKeyCode::H))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+
+			animator->PlayAnimation(L"Saber_SitAAttack", false);
+			mState = eState::Attack;
+		}
+
+		if (Input::GetKey(eKeyCode::J))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+			animator->PlayAnimation(L"Saber_SitBAttack", false);
+			mState = eState::Attack;
+		}
+		if (Input::GetKey(eKeyCode::Y))
+		{
+			Transform* tr = GetComponent<Transform>();
+
+
+			animator->PlayAnimation(L"Saber_SitCAttack", false);
+			mState = eState::Attack;
+		}
+
+		if (Input::GetKeyUp(eKeyCode::S))
+		{
+			Animator* animator = GetComponent<Animator>();
+			animator->PlayAnimation(L"Saber_Idle", true);
+			mState = eState::Idle;
+		}
+
 	}
 	void Saber::SitAttack()
 	{
+		Animator* animator = GetComponent<Animator>();
+		if (animator->IsActiveAnimationComplete())
+		{
+			animator->PlayAnimation(L"Saber_Idle", true);
+			mState = eState::Idle;
+		}
 	}
 	void Saber::StandToSit()
 	{

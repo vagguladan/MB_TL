@@ -23,6 +23,7 @@ namespace MB
 		virtual void Initialize();
 		virtual void Update();
 		virtual void Render(HDC hdc);
+		virtual void MakeAnimation();
 
 		template <typename T>
 		T* GetComponent()

@@ -7,7 +7,6 @@
 #include "MBRigidBody.h"
 #include "MBCollider.h"
 #include "MBObject.h"
-#include "MBSaberHitBox.h"
 
 namespace MB
 {
@@ -267,9 +266,6 @@ namespace MB
 		if (_mAnimator->GetActiveAnime()->GetIndex() == 4)
 		{
 			Transform* tr = GetComponent<Transform>();
-			SaberHitBox* slash1 = object::Instantiate<SaberHitBox>(eLayerType::HitBox, tr->GetPosition());
-			slash1->SetPlayer(this);
-			slash1->SaberHitboxCollider();
 		}
 		if (_mAnimator->IsActiveAnimationComplete())
 		{

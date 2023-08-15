@@ -27,6 +27,10 @@ namespace MB
 
 		void SetOnColColor(COLORREF color) { mOnColColor = color; }
 
+		__forceinline void SetLineColor(COLORREF _color) { lineColor = _color; }
+		__forceinline void SetCollisionLineColor(COLORREF _color) { collisionLineColor = _color; }
+
+
 		void SetNotColColor(COLORREF color) { mNotColColor = color; }
 
 	private:
@@ -38,6 +42,11 @@ namespace MB
 
 		COLORREF mOnColColor;
 		COLORREF mNotColColor;
+
+
+		COLORREF lineColor;
+		COLORREF collisionLineColor;
+		COLORREF inActiveLineColor;
 
 		UINT mCollisionNumber;
 		bool mbIsCollision;

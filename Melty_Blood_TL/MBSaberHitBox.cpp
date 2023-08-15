@@ -1,18 +1,15 @@
 #include "MBSaberHitBox.h"
-#include "MBSaber.h"
-#include "MBAnimator.h"
 #include "MBTransform.h"
+#include "MBSaber.h"
 #include "MBCollider.h"
+
 #include "MBCollisionManager.h"
-#include "MBObject.h"
-#include "MBTime.h"
+
 
 
 namespace MB
 {
-	SaberHitBox::SaberHitBox():
-		mSaber(nullptr)
-		,mTime(0.f)
+	SaberHitBox::SaberHitBox()
 	{
 	}
 	SaberHitBox::~SaberHitBox()
@@ -20,35 +17,36 @@ namespace MB
 	}
 	void SaberHitBox::Initialize()
 	{
-		mCollider = AddComponent<Collider>();
+		GetComponent<Collider>()->SetLineColor(RGB(0, 0, 255));
 	}
 	void SaberHitBox::Update()
 	{
 		GameObject::Update();
-		mTime += Time::DeltaTime();
-		if (mTime > 0.15f)
+
+		Saber* saber = dynamic_cast<Saber*>(GetOwner());
+
+		if (saber != nullptr)
 		{
-			Destroy(this);
+			math::Vector2 size = GetOwner()->GetComponent<Collider>()->GetSize();
+
+			
+
 		}
 	}
-	void SaberHitBox::SaberHitboxCollider()
+	void SaberHitBox::Render(HDC _hdc)
 	{
-		mCollider->SetNotColColor(RGB(255, 50, 50));
-
+		GameObject::Render(_hdc);
 	}
-
-	void SaberHitBox::Render(HDC hdc)
-	{
-		GameObject::Render(hdc);
-	}
-	void SaberHitBox::OnCollisionEnter(Collider* other)
+	void SaberHitBox::MakeAnimation()
 	{
 	}
-	void SaberHitBox::OnCollisionStay(Collider* other)
+	void SaberHitBox::OnCollisionEnter(Collider* _other)
 	{
 	}
-	void SaberHitBox::OnCollisionExit(Collider* other)
+	void SaberHitBox::OnCollisionStay(Collider* _other)
 	{
 	}
-
+	void SaberHitBox::OnCollisionExit(Collider* _other)
+	{
+	}
 }
